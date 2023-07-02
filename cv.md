@@ -24,3 +24,8 @@
         return ' '.join(s.capitalize() for s in string.split()) 
 ```
 ---
+## _**Education**_
+### Belarussian State University of Informatics and Radioelectronics (Incomplete)
+---
+## _**English level**_
+### A2, but sudy hard.
