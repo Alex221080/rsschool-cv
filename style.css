@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.photo {
+	border:8px solid #1e2738;
+}
+
+html {
+  font-family: Montserrat, sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  color:antiquewhite;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  color:rgb(221, 185, 137);
+  font-size: 1.5em;
+}
+
+.main-cv {
+  margin: 1em;
+}
+
+.cv-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	width: 40%;
+	top: 2rem;
+	border:8px solid #1e2738;
+  border-radius: 40px 10px;
+}
+
+body {
+  max-width: 1024px;
+  min-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #19202E;
+}
+
+.navbar {
+  background: #345;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height:50px;
+  text-align: center;
+  display: inline;
+  vertical-align:middle;
+}
+
+.navbar a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  margin: 5rem;
+}
+
+.im {
+  font-size: 1.5em;
+  border-bottom: #fff 1px solid;
+  text-align: center;
+
+}
+
+.about, .education, .skills, .code {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 2em;
+  margin-top: 2em;
+  color: rgb(141, 211, 233);
+  border-bottom: 1px #918585 solid;
+}
+
+.contact {
+  margin-top: 2em;
+  border-bottom: #fff 1px solid;
+  text-align: center;
+}
+
+
+.text {
+  color: white;
+  font-size: 16px;
+}
+
+.code-text {
+  color: white;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  background-color: #35435f;
+  border: #505153 1px solid;
+  padding: 10px;
+  font-size: 1.5rem;
+  color: white
+}
+
+.footer-container a {
+  color: #9b73e6;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.footer-container a:hover {
+  color:rgb(199, 12, 21);
+  text-decoration: underline;
+}
