@@ -2,11 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>CV Project</title>
 </head>
 <body>
+    <header>
+        <div class="navbar">
+            <a href="#contact">Contacts</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#code">Code example</a>
+        </div>
+    </header>
     
+    <main class="main">
+        <img class="cv-photo" src="/img/FotoBW.jpg" alt="RS Student">
+ 
+        <div class="main-cv">
+                <div class="im" id="contact">     
+                    <h1 >Basalay Alexandr</h1>
+                    <h2>Beginner web developer</h2>
+                </div>      
+
+                <div class="contact">    
+                    <h2>Belarus, Brest region</h2>
+                    <h2>+375 29 573 69 71</h2> 
+                </div>                      
+
+                <div class="about" id="about">    
+                    <p>About Me</p>
+                </div>
+                <div class="text">
+                    <p>
+                        Hello! I’m a beginner frontend an backend developer.
+                        I want to upgrade my skills.
+                        I like to study and learn something new.
+                    </p>
+                </div>      
+
+                <div class="education" id="education">    
+                    <p>Education</p>
+                </div>
+                <div class="text">
+                    <p>
+                        Belarusian State University of Informatics and Radioelectronics (BSUIR)
+                    </p>    
+                </div>                      
+                <div class="skills" id="skills">
+                    <p>Skills</p>
+                </div>
+                <div class="text">
+                    <ul>
+                        <li>C, C++</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Git</li>
+                        <li>English level B1</li>
+                    </ul>
+                </div>    
+                <div class="code" id="code">
+                    <p>Code example</p>
+                </div>
+                <div class="code-text">    
+                    <pre>
+                        <code>
+from dataclasses import dataclass
+from random import choice, shuffle
+
+
+@dataclass()
+class Card:
+    rank: str
+    suit: str
+
+
+class Deck:
+    suites = [b'\xE2\x99\xA0'.decode(),  # SPADE
+              b'\xE2\x99\xA3'.decode(),  # CLUB
+              b'\xE2\x99\xA6'.decode(),  # DIAMOND
+              b'\xE2\x99\xA5'.decode()]  # HEART
+    deck_types = {'Russian': 6,
+                  'French': 2}
+
+    def __init__(self, deck_type: str):
+        try:
+            self.deck_type = deck_type
+            self.ranks = [str(i) for i in range(self.deck_types[deck_type], 11)] + ['J', 'Q', 'K', 'A']
+            self.deck = [Card(rank, suit) for suit in self.suites
+                         for rank in self.ranks]
+        except KeyError:
+            self.deck = []
+
+    def __len__(self):
+        return len(self.deck)
+
+    def __getitem__(self, item):
+        return self.deck[item]
+
+    def __str__(self):
+        if self.deck:
+            return f' Deck created with {len(self.deck)} cards'
+        else:
+            return f'Deck must be only "Russian" or "French" not {self.deck_type}'
+
+
+russian_deck = Deck('Russian')
+print(russian_deck)
+for card in russian_deck:
+    print(card.rank + card.suit, end=' ')
+print('\n')
+
+french_deck = Deck('French')
+print(french_deck)
+for card in french_deck:
+    print(card.rank + card.suit, end=' ')
+print('\n')
+                        </code>
+                    </pre>
+                </div>      
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <a href="https://www.codewars.com/users/Alex221080" target="_blank">
+                <img src="https://www.codewars.com/users/Alex221080/badges/micro" alt="Codewares">
+            </a>
+            <a href="https://github.com/Alex221080" target="_blank">My GitHub</a>
+            <span>2023</span>
+            <a href="https://rs.school/js/" target="_blank">
+                <img src="img/logo_rs.svg" alt="RS Logo" height=50>
+            </a>
+        </div> 
+    </footer>
 </body>
+
 </html>
