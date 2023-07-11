@@ -1,4 +1,4 @@
-![logo](rsschool3.png)
+
 
 ---
 # **BASALAY ALEXANDR**
